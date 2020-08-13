@@ -1,0 +1,17 @@
+{
+  "name": "dolgov/nogit",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Dolgov",
+      "email": "beattle-b@yandex.ru"
+    }
+  ],
+  "require": {
+    "gregwar/image": "2.*",
+    "gabordemooij/redbean": "dev-master",
+    "ext-json": "*"
+  }
+}
