@@ -9,7 +9,7 @@ if ($Mobile_Detect->isMobile()) {
 }
 
 
-foreach (new DirectoryIterator('images/') as $file) {
+foreach (new DirectoryIterator('gallery/') as $file) {
 	if ($file->isFile()) {
 		$file_name = $file->getBasename('.' . $file->getExtension());
 		if (in_array($file_name, $images)) {
@@ -20,7 +20,7 @@ foreach (new DirectoryIterator('images/') as $file) {
 	}
 }
 if (empty($images)) {
-	die('Картинок не найдено');
+	die('Изображения не найдены');
 }
 
 ?>

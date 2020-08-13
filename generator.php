@@ -10,7 +10,7 @@ R::setup( 'mysql:host=localhost;dbname=test',
 if(!empty($_GET['name']) && !empty($_GET['size'])){
 
 	$db_size  = R::findOne( 'images', ' size = ? ', [ $_GET['size']] );
-	$file = current(glob("images/$_GET[name].*"));
+	$file = current(glob("gallery/$_GET[name].*"));
 
 	header('Content-Type: image/jpeg');
 	echo file_get_contents( Image::open($file)->resize($db_size['width'],$db_size['height'])->jpeg(100));
